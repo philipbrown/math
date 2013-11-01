@@ -40,4 +40,13 @@ class MathTest extends TestCase {
     $this->assertEquals('3.33333', $this->m->divide(10, 3, 5));
   }
 
+  public function testModulus()
+  {
+    $this->assertEquals('0', $this->m->modulus(4, 2));
+    $this->assertEquals('2', $this->m->modulus(2, 4));
+    $this->assertEquals('1', $this->m->modulus(10, 3));
+    $this->assertEquals('2', $this->m->modulus(20, 3));
+    $this->assertEquals('1', $this->m->modulus(15, 2));
+  }
+
 }

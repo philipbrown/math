@@ -54,4 +54,17 @@ class Math {
     return bcdiv($a, $b, $scale);
   }
 
+  /**
+   * Modulus
+   *
+   * @param string $a
+   * @param string $a
+   * @param integer $scale
+   * @return string
+   */
+  public function modulus($a, $b)
+  {
+    return bcmod($a, $b);
+  }
+
 }
