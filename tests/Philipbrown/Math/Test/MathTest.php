@@ -49,4 +49,13 @@ class MathTest extends TestCase {
     $this->assertEquals('1', $this->m->modulus(15, 2));
   }
 
+  public function testSquareRoot()
+  {
+    $this->assertEquals('7', $this->m->squareRoot(49));
+    $this->assertEquals('4.8989794', $this->m->squareRoot(24, 7));
+    $this->assertEquals('5.916', $this->m->squareRoot(35, 3));
+    $this->assertEquals('7.48331', $this->m->squareRoot(56, 5));
+    $this->assertEquals('67.490740', $this->m->squareRoot(4555, 6));
+  }
+
 }

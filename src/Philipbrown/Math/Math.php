@@ -59,12 +59,22 @@ class Math {
    *
    * @param string $a
    * @param string $a
-   * @param integer $scale
    * @return string
    */
   public function modulus($a, $b)
   {
     return bcmod($a, $b);
+  }
+
+  /**
+   * Square Root
+   *
+   * @param string $a
+   * @return string
+   */
+  public function squareRoot($a, $scale = 0)
+  {
+    return bcsqrt($a, $scale);
   }
 
 }
