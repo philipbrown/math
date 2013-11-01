@@ -58,4 +58,13 @@ class MathTest extends TestCase {
     $this->assertEquals('67.490740', $this->m->squareRoot(4555, 6));
   }
 
+  public function testCompare()
+  {
+    $this->assertEquals(0, $this->m->compare(23, 23));
+    $this->assertEquals(1, $this->m->compare(23.45, 23.23, 2));
+    $this->assertEquals(1, $this->m->compare(123.123, 123.122, 3));
+    $this->assertEquals(-1, $this->m->compare(99.98, 99.99, 2));
+    $this->assertEquals(-1, $this->m->compare(33.44, 35));
+  }
+
 }

@@ -70,11 +70,24 @@ class Math {
    * Square Root
    *
    * @param string $a
+   * @param integer $scale
    * @return string
    */
   public function squareRoot($a, $scale = 0)
   {
     return bcsqrt($a, $scale);
+  }
+
+  /**
+   * Compare
+   *
+   * @param string $a
+   * @param string $b
+   * @param integer $scale
+   */
+  public function compare($a, $b, $scale = 0)
+  {
+    return bccomp($a, $b, $scale);
   }
 
 }
