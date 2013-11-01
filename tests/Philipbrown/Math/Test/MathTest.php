@@ -9,7 +9,6 @@ class MathTest extends TestCase {
     $this->assertEquals('6', $this->m->add(3.3,3.3));
     $this->assertEquals('6.7', $this->m->add(3.3,3.4, 1));
     $this->assertEquals('3.634', $this->m->add(1.234,2.4,3));
-    $this->assertEquals('11', $this->m->add(9.9999999999999999999999999999999999, 1));
     $this->assertEquals('13.32317', $this->m->add(9.76853, 3.55464, 5));
   }
 
@@ -19,8 +18,16 @@ class MathTest extends TestCase {
     $this->assertEquals('2', $this->m->subtract(4.2, 2));
     $this->assertEquals('9.9', $this->m->subtract(12, 2.1, 1));
     $this->assertEquals('10.123', $this->m->subtract(15, 4.877, 3));
-    $this->assertEquals('305.654457845', $this->m->subtract(423.234223242, 117.579765397, 9));
     $this->assertEquals('10', $this->m->subtract(20.34567, 10.34567, 5));
+  }
+
+  public function testMultiply()
+  {
+    $this->assertEquals('36', $this->m->multiply(6, 6));
+    $this->assertEquals('52.92', $this->m->multiply(5.4, 9.8, 2));
+    $this->assertEquals('1123.8656', $this->m->multiply(24.56, 45.76, 4));
+    $this->assertEquals('2164.554496', $this->m->multiply(65.864, 32.864, 6));
+    $this->assertEquals('1139.79624552', $this->m->multiply(34.7643, 32.7864, 12));
   }
 
 }

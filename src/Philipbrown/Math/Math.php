@@ -28,4 +28,17 @@ class Math {
     return bcsub($a, $b, $scale);
   }
 
+  /**
+   * Multiply
+   *
+   * @param string $a
+   * @param string $a
+   * @param integer $scale
+   * @return string
+   */
+  public function multiply($a, $b, $scale = 0)
+  {
+    return bcmul($a, $b, $scale);
+  }
+
 }
