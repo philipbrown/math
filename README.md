@@ -1,7 +1,9 @@
 #Math
 **A simple wrapper for BC Math**
 
-This is really just a very simple wrapper for BC Math. I'll add some nicer methods as and when I need them.
+[![Build Status](https://travis-ci.org/philipbrown/math.png)](https://travis-ci.org/philipbrown/math)
+
+This is really just a very simple wrapper for [BC Math](http://php.net/manual/en/book.bc.php). I'll add some nicer methods as and when I need them.
 
 ##Installation
 Add `philipbrown/math` as a requirement to `composer.json`:
