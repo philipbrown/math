@@ -15,4 +15,17 @@ class Math {
     return bcadd($a, $b, $scale);
   }
 
+  /**
+   * Subtract
+   *
+   * @param string $a
+   * @param string $a
+   * @param integer $scale
+   * @return string
+   */
+  public function subtract($a, $b, $scale = 0)
+  {
+    return bcsub($a, $b, $scale);
+  }
+
 }
