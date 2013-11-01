@@ -67,4 +67,13 @@ class MathTest extends TestCase {
     $this->assertEquals(-1, $this->m->compare(33.44, 35));
   }
 
+  public function testPower()
+  {
+    $this->assertEquals('74.08', $this->m->power('4.2', '3', 2));
+    $this->assertEquals('39.304', $this->m->power('3.4', '3', 3));
+    $this->assertEquals('10262796.6736', $this->m->power('56.6', '4', 4));
+    $this->assertEquals('75.258349', $this->m->power('4.222', '3', 6));
+    $this->assertEquals('2050702882069.856', $this->m->power('23.334', '9', 3));
+  }
+
 }

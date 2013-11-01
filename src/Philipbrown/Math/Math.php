@@ -84,10 +84,24 @@ class Math {
    * @param string $a
    * @param string $b
    * @param integer $scale
+   * @return string
    */
   public function compare($a, $b, $scale = 0)
   {
     return bccomp($a, $b, $scale);
+  }
+
+  /**
+   * Power
+   *
+   * @param string $a
+   * @param string $b
+   * @param integer $scale
+   * @return string
+   */
+  public function power($a, $b, $scale =0)
+  {
+    return bcpow($a, $b, $scale);
   }
 
 }
