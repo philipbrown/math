@@ -30,4 +30,14 @@ class MathTest extends TestCase {
     $this->assertEquals('1139.79624552', $this->m->multiply(34.7643, 32.7864, 12));
   }
 
+  public function testDivide()
+  {
+    $this->assertEquals('7', $this->m->divide(49, 7));
+    $this->assertEquals('3.1', $this->m->divide(9.3, 3, 1));
+    $this->assertEquals('3.33', $this->m->divide(10, 3, 2));
+    $this->assertEquals('3.333', $this->m->divide(10, 3, 3));
+    $this->assertEquals('3.3333', $this->m->divide(10, 3, 4));
+    $this->assertEquals('3.33333', $this->m->divide(10, 3, 5));
+  }
+
 }

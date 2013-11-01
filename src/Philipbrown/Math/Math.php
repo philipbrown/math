@@ -41,4 +41,17 @@ class Math {
     return bcmul($a, $b, $scale);
   }
 
+  /**
+   * Divide
+   *
+   * @param string $a
+   * @param string $a
+   * @param integer $scale
+   * @return string
+   */
+  public function divide($a, $b, $scale = 0)
+  {
+    return bcdiv($a, $b, $scale);
+  }
+
 }
