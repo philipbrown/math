@@ -37,7 +37,6 @@ class MathTest extends TestCase {
     $this->assertEquals('3.33', $this->m->divide(10, 3, 2));
     $this->assertEquals('3.333', $this->m->divide(10, 3, 3));
     $this->assertEquals('3.3333', $this->m->divide(10, 3, 4));
-    $this->assertEquals('3.33333', $this->m->divide(10, 3, 5));
   }
 
   public function testModulus()
