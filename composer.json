@@ -1,6 +1,6 @@
 {
     "name": "philipbrown/math",
-    "description": "",
+    "description": "A simple wrapper for BC Math",
     "license": "MIT",
     "authors": [
         {
