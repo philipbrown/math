@@ -25,6 +25,7 @@ class Math {
    */
   public function setScale($scale)
   {
+    if(! $scale instanceof PositiveNumber)
     $scale = new PositiveNumber($scale);
 
     return $this->scale = $scale;
