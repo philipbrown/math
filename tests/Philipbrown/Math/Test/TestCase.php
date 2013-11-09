@@ -8,7 +8,7 @@ class TestCase extends PHPUnit_Framework_TestCase {
   public function m($scale = 0)
   {
     $m = new Math;
-    $m->setScale(0);
+    $m->setScale($scale);
     return $m;
   }
 
