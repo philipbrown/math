@@ -1,9 +1,8 @@
 <?php namespace Philipbrown\Math\Test;
 
-
 class MathTest extends TestCase {
 
-  public function testTheTruth()
+  public function testTruth()
   {
     $this->assertEquals(true, true);
   }
