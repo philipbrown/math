@@ -4,7 +4,7 @@ class MathTest extends TestCase {
 
   public function testSetScale()
   {
-    $this->assertInstanceOf('Philipbrown\Math\PositiveNumber', $this->m->setScale(2));
+    $this->assertInstanceOf('Philipbrown\Math\PositiveNumber', $this->m()->setScale(2));
   }
 
   /**
@@ -13,7 +13,7 @@ class MathTest extends TestCase {
    */
   public function testCreateInvalidRegion()
   {
-    $this->m->setScale('what up');
+    $this->m()->setScale('what up');
   }
 
 }

@@ -4,7 +4,7 @@ class NumberTest extends TestCase {
 
   public function testCreatingNumber()
   {
-    $this->assertInstanceOf('Philipbrown\Math\Number', $this->m->create(2));
+    $this->assertInstanceOf('Philipbrown\Math\Number', $this->m()->create(2));
   }
 
   /**
@@ -13,7 +13,7 @@ class NumberTest extends TestCase {
    */
   public function testCreateInvalidRegion()
   {
-    $this->m->create('what up');
+    $this->m()->create('what up');
   }
 
 }

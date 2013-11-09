@@ -5,9 +5,11 @@ use Philipbrown\Math\Math;
 
 class TestCase extends PHPUnit_Framework_TestCase {
 
-  public function setUp()
+  public function m($scale = 0)
   {
-    $this->m = new Math;
+    $m = new Math;
+    $m->setScale(0);
+    return $m;
   }
 
 }

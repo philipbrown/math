@@ -4,7 +4,7 @@ class AddTest extends TestCase {
 
   public function testAdd()
   {
-    $this->assertEquals($this->m->add(1,2)->getValue(), 3);
+    $this->assertEquals(3, $this->m()->add(1,2)->getValue());
   }
 
 }
