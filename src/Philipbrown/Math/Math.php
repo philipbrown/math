@@ -5,7 +5,15 @@ class Math {
   /**
    * @var integer
    */
-  protected $scale = 0;
+  protected $scale;
+
+  /**
+   * Construct
+   */
+  public function __construct()
+  {
+    $this->scale = new PositiveNumber(0);
+  }
 
   /**
    * Create
@@ -26,14 +34,26 @@ class Math {
   public function setScale($scale)
   {
     if(! $scale instanceof PositiveNumber)
-    $scale = new PositiveNumber($scale);
+    {
+      $scale = new PositiveNumber($scale);
+    }
 
     return $this->scale = $scale;
   }
 
+  /**
+   * Add
+   *
+   * @param $left string
+   * @param $right string
+   * @return
+   */
   public function add($left, $right)
   {
+    $command = new Command\Add;
 
+    return $command->run($left, $right, $this->scale);
   }
+
 
 }
