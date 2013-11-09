@@ -27,9 +27,7 @@ class Math {
   {
     $scale = new PositiveNumber($scale);
 
-    $this->scale = $scale;
-
-    return $scale;
+    return $this->scale = $scale;
   }
 
   public function add($left, $right)
