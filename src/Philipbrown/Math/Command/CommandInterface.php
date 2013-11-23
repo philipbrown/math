@@ -5,9 +5,9 @@ interface CommandInterface {
   /**
    * Run
    *
-   * @param $left Math\Number
-   * @param $right Math\Number
-   * @return Math\Math
+   * @param $left integer
+   * @param $right integer
+   * @return Math\Number
    */
   public function run($left, $right, $scale);
 

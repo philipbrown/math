@@ -7,8 +7,8 @@ abstract class AbstractCommand {
   /**
    * Is Number
    *
-   * @param $number string
-   * @return bool
+   * @param $number integer
+   * @return Math\Number
    */
   public function isNumber($number)
   {
