@@ -17,6 +17,40 @@ Update your packages with `composer update`.
 
 Inspired by [php-bcmath](https://github.com/notrix/php-bcmath).
 
+##Usage
+Using this package is really easy.
+
+Create a new instance of Math:
+```php
+$m = new Philipbrown\Math\Math;
+```
+
+Set your required scale:
+```php
+// Default is 0
+$m->setScale(2);
+```
+
+Add two numbers:
+```php
+$m->add(2, 2); // 4
+```
+
+Subtract two numbers:
+```php
+$m->subtract(6, 3); // 3
+```
+
+Multiply two numbers:
+```php
+$m->multiply(5, 5); // 25
+```
+
+Divide two numbers:
+```php
+$m->divide(100, 10); // 10
+```
+
 ## License
 The MIT License (MIT)
 
