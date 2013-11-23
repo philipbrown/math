@@ -84,4 +84,18 @@ class Math {
     return $command->run($left, $right, $this->scale);
   }
 
+  /**
+   * Multiply
+   *
+   * @param $left string
+   * @param $right string
+   * @return Math\Number
+   */
+  public function multiply($left, $right)
+  {
+    $command = new Command\Multiply;
+
+    return $command->run($left, $right, $this->scale);
+  }
+
 }
