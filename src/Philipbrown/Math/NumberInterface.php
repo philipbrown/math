@@ -9,12 +9,4 @@ interface NumberInterface {
    */
   public function getValue();
 
-  /**
-   * Is Valid
-   *
-   * @param string $number
-   * @return bool
-   */
-  public function isValid($number);
-
 }

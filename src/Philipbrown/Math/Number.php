@@ -40,7 +40,7 @@ class Number implements NumberInterface {
    * @param string $number
    * @return bool
    */
-  public function isValid($number)
+  protected function isValid($number)
   {
     return (boolean) preg_match('/^\-?\d+(\.\d+)?$/', $number);
   }
