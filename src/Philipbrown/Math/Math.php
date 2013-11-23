@@ -30,6 +30,7 @@ class Math {
    * Set Scale
    *
    * @param $scale integer
+   * @return int
    */
   public function setScale($scale)
   {
@@ -46,11 +47,25 @@ class Math {
    *
    * @param $left string
    * @param $right string
-   * @return
+   * @return Math\Number
    */
   public function add($left, $right)
   {
     $command = new Command\Add;
+
+    return $command->run($left, $right, $this->scale);
+  }
+
+  /**
+   * Subtract
+   *
+   * @param $left string
+   * @param $right string
+   * @return Math\Number
+   */
+  public function subtract($left, $right)
+  {
+    $command = new Command\Subtract;
 
     return $command->run($left, $right, $this->scale);
   }
