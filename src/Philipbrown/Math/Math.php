@@ -70,5 +70,18 @@ class Math {
     return $command->run($left, $right, $this->scale);
   }
 
+  /**
+   * Divide
+   *
+   * @param $left string
+   * @param $right string
+   * @return Math\Number
+   */
+  public function divide($left, $right)
+  {
+    $command = new Command\Divide;
+
+    return $command->run($left, $right, $this->scale);
+  }
 
 }
