@@ -50,6 +50,7 @@ Divide two numbers:
 ```php
 $m->divide(100, 10); // 10
 ```
+You will be returned an instance of ```Philipbrown\Math\Number``` in each case.
 
 ## License
 The MIT License (MIT)
