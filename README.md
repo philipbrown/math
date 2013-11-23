@@ -15,6 +15,8 @@ Add `philipbrown/math` as a requirement to `composer.json`:
 ```
 Update your packages with `composer update`.
 
+Inspired by [php-bcmath](https://github.com/notrix/php-bcmath).
+
 ## License
 The MIT License (MIT)
 
