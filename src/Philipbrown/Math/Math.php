@@ -98,4 +98,18 @@ class Math {
     return $command->run();
   }
 
+  /**
+   * Compare
+   *
+   * @param $left string
+   * @param $right string
+   * @return Math\Number
+   */
+  public function compare($left, $right)
+  {
+    $command = new Command\Compare($left, $right, $this->scale);
+
+    return $command->run();
+  }
+
 }
