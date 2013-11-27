@@ -140,4 +140,17 @@ class Math {
     return $command->run();
   }
 
+  /**
+   * Square Root
+   *
+   * @param $operand int
+   * @return Math\Number
+   */
+  public function squareRoot($operand)
+  {
+    $command = new Command\SquareRoot($operand, $this->scale);
+
+    return $command->run();
+  }
+
 }
