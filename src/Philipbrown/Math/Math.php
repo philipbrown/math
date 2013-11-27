@@ -51,9 +51,9 @@ class Math {
    */
   public function add($left, $right)
   {
-    $command = new Command\Add;
+    $command = new Command\Add($left, $right, $this->scale);
 
-    return $command->run($left, $right, $this->scale);
+    return $command->run();
   }
 
   /**
@@ -65,9 +65,9 @@ class Math {
    */
   public function subtract($left, $right)
   {
-    $command = new Command\Subtract;
+    $command = new Command\Subtract($left, $right, $this->scale);
 
-    return $command->run($left, $right, $this->scale);
+    return $command->run();
   }
 
   /**
@@ -79,9 +79,9 @@ class Math {
    */
   public function divide($left, $right)
   {
-    $command = new Command\Divide;
+    $command = new Command\Divide($left, $right, $this->scale);
 
-    return $command->run($left, $right, $this->scale);
+    return $command->run();
   }
 
   /**
@@ -93,9 +93,9 @@ class Math {
    */
   public function multiply($left, $right)
   {
-    $command = new Command\Multiply;
+    $command = new Command\Multiply($left, $right, $this->scale);
 
-    return $command->run($left, $right, $this->scale);
+    return $command->run();
   }
 
 }

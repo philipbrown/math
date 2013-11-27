@@ -5,19 +5,45 @@ use Philipbrown\Math\Number;
 class Multiply extends AbstractCommand implements CommandInterface {
 
   /**
-   * Run
+   * @var int
+   */
+  protected $left;
+
+  /**
+   * @var int
+   */
+  protected $right;
+
+  /**
+   * @var int
+   */
+  protected $scale;
+
+  /**
+   * Construct
    *
    * @param $left integer
    * @param $right integer
    * @param $scale integer
+   */
+  public function __construct($left, $right, $scale)
+  {
+    $this->left = $left;
+    $this->right = $right;
+    $this->scale = $scale;
+  }
+
+  /**
+   * Run
+   *
    * @return Math\Number
    */
-  public function run($left, $right, $scale)
+  public function run()
   {
-    $left = $this->isNumber($left);
-    $right = $this->isNumber($right);
+    $left = $this->isNumber($this->left);
+    $right = $this->isNumber($this->right);
 
-    return new Number(bcmul($left->getValue(), $right->getValue(), $scale->getValue()));
+    return new Number(bcmul($left->getValue(), $right->getValue(), $this->scale->getValue()));
   }
 
 }
