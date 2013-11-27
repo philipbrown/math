@@ -126,4 +126,18 @@ class Math {
     return $command->run();
   }
 
+  /**
+   * Power
+   *
+   * @param $left int
+   * @param $right int
+   * @return Math\Number
+   */
+  public function power($left, $right)
+  {
+    $command = new Command\Power($left, $right, $this->scale);
+
+    return $command->run();
+  }
+
 }
