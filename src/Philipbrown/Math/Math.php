@@ -18,7 +18,7 @@ class Math {
   /**
    * Create
    *
-   * @param $value string
+   * @param $value int
    * @return Math\Number
    */
   public function create($value)
@@ -29,7 +29,7 @@ class Math {
   /**
    * Set Scale
    *
-   * @param $scale integer
+   * @param $scale int
    * @return int
    */
   public function setScale($scale)
@@ -45,8 +45,8 @@ class Math {
   /**
    * Add
    *
-   * @param $left string
-   * @param $right string
+   * @param $left int
+   * @param $right int
    * @return Math\Number
    */
   public function add($left, $right)
@@ -59,8 +59,8 @@ class Math {
   /**
    * Subtract
    *
-   * @param $left string
-   * @param $right string
+   * @param $left int
+   * @param $right int
    * @return Math\Number
    */
   public function subtract($left, $right)
@@ -73,8 +73,8 @@ class Math {
   /**
    * Divide
    *
-   * @param $left string
-   * @param $right string
+   * @param $left int
+   * @param $right int
    * @return Math\Number
    */
   public function divide($left, $right)
@@ -87,8 +87,8 @@ class Math {
   /**
    * Multiply
    *
-   * @param $left string
-   * @param $right string
+   * @param $left int
+   * @param $right int
    * @return Math\Number
    */
   public function multiply($left, $right)
@@ -101,13 +101,27 @@ class Math {
   /**
    * Compare
    *
-   * @param $left string
-   * @param $right string
+   * @param $left int
+   * @param $right int
    * @return Math\Number
    */
   public function compare($left, $right)
   {
     $command = new Command\Compare($left, $right, $this->scale);
+
+    return $command->run();
+  }
+
+  /**
+   * Modulus
+   *
+   * @param $left int
+   * @param $modulus int
+   * @return Math\Number
+   */
+  public function modulus($left, $modulus)
+  {
+    $command = new Command\Modulus($left, $modulus);
 
     return $command->run();
   }
