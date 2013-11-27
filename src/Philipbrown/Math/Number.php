@@ -45,4 +45,14 @@ class Number implements NumberInterface {
     return (boolean) preg_match('/^\-?\d+(\.\d+)?$/', $number);
   }
 
+  /**
+   * To String
+   *
+   * @return string
+   */
+  public function __toString()
+  {
+    return $this->value;
+  }
+
 }
