@@ -50,6 +50,27 @@ Divide two numbers:
 ```php
 $m->divide(100, 10); // 10
 ```
+
+Compare two numbers:
+```php
+$m->compare(2, 2); // 0
+```
+
+Find the modulus of two numbers:
+```php
+$m->modulus(2, 4); // 2
+```
+
+Find a number to the power of:
+```php
+$m->power(4, 3); // 64
+```
+
+Find the square root of a number:
+```php
+$m->squareRoot(49); // 7
+```
+
 You will be returned an instance of ```Philipbrown\Math\Number``` in each case.
 
 ## License
