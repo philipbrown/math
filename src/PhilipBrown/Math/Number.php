@@ -1,6 +1,6 @@
 <?php namespace PhilipBrown\Math;
 
-use PhilipBrown\Math\Exception\InvalidNumberException;
+use PhilipBrown\Math\Exceptions\InvalidNumberException;
 
 class Number implements NumberInterface {
 

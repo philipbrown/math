@@ -8,7 +8,7 @@ class MathTest extends TestCase {
   }
 
   /**
-   * @expectedException        PhilipBrown\Math\Exception\InvalidNumberException
+   * @expectedException        PhilipBrown\Math\Exceptions\InvalidNumberException
    * @expectedExceptionMessage what up is not a valid number.
    */
   public function testCreateInvalidRegion()

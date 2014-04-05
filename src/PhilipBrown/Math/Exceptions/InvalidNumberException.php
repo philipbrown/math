@@ -1,4 +1,4 @@
-<?php namespace PhilipBrown\Math\Exception;
+<?php namespace PhilipBrown\Math\Exceptions;
 
 use Exception;
 
