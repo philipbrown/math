@@ -22,7 +22,7 @@ Using this package is really easy.
 
 Create a new instance of Math:
 ```php
-$m = new Philipbrown\Math\Math;
+$m = new PhilipBrown\Math\Math;
 ```
 
 Set your required scale:
@@ -71,12 +71,12 @@ Find the square root of a number:
 $m->squareRoot(49); // 7
 ```
 
-You will be returned an instance of ```Philipbrown\Math\Number``` in each case.
+You will be returned an instance of ```PhilipBrown\Math\Number``` in each case.
 
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2013 Philip Brown.
+Copyright (c) 2014 Philip Brown.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
