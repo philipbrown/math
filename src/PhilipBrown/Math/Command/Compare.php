@@ -1,6 +1,6 @@
-<?php namespace Philipbrown\Math\Command;
+<?php namespace PhilipBrown\Math\Command;
 
-use Philipbrown\Math\Number;
+use PhilipBrown\Math\Number;
 
 class Compare extends AbstractCommand implements CommandInterface {
 

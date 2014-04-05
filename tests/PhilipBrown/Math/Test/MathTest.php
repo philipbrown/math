@@ -1,14 +1,14 @@
-<?php namespace Philipbrown\Math\Test;
+<?php namespace PhilipBrown\Math\Test;
 
 class MathTest extends TestCase {
 
   public function testSetScale()
   {
-    $this->assertInstanceOf('Philipbrown\Math\PositiveNumber', $this->m()->setScale(2));
+    $this->assertInstanceOf('PhilipBrown\Math\PositiveNumber', $this->m()->setScale(2));
   }
 
   /**
-   * @expectedException        Philipbrown\Math\Exception\InvalidNumberException
+   * @expectedException        PhilipBrown\Math\Exception\InvalidNumberException
    * @expectedExceptionMessage what up is not a valid number.
    */
   public function testCreateInvalidRegion()

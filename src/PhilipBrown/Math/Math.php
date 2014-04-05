@@ -1,4 +1,4 @@
-<?php namespace Philipbrown\Math;
+<?php namespace PhilipBrown\Math;
 
 class Math {
 

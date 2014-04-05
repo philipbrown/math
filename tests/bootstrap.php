@@ -4,4 +4,4 @@
 $autoloader = require __DIR__.'/../vendor/autoload.php';
 
 // Add Math
-$autoloader->add('Philipbrown\Math', __DIR__);
+$autoloader->add('PhilipBrown\Math', __DIR__);

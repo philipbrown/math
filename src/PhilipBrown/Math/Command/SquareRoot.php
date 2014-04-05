@@ -1,6 +1,6 @@
-<?php namespace Philipbrown\Math\Command;
+<?php namespace PhilipBrown\Math\Command;
 
-use Philipbrown\Math\Number;
+use PhilipBrown\Math\Number;
 
 class SquareRoot extends AbstractCommand implements CommandInterface {
 

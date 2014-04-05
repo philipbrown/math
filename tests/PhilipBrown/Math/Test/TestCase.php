@@ -1,7 +1,7 @@
-<?php namespace Philipbrown\Math\Test;
+<?php namespace PhilipBrown\Math\Test;
 
 use PHPUnit_Framework_TestCase;
-use Philipbrown\Math\Math;
+use PhilipBrown\Math\Math;
 
 class TestCase extends PHPUnit_Framework_TestCase {
 

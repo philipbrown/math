@@ -1,4 +1,4 @@
-<?php namespace Philipbrown\Math\Command;
+<?php namespace PhilipBrown\Math\Command;
 
 interface CommandInterface {
 

@@ -1,4 +1,4 @@
-<?php namespace Philipbrown\Math\Test;
+<?php namespace PhilipBrown\Math\Test;
 
 class MultiplyTest extends TestCase {
 
