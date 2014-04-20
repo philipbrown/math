@@ -5,20 +5,24 @@ use PhilipBrown\Math\Number;
 class Modulus extends AbstractCommand implements CommandInterface {
 
   /**
-   * @var int
+   * The left operand, as a string.
+   *
+   * @var string
    */
   protected $left;
 
   /**
-   * @var int
+   * The modulus, as a string.
+   *
+   * @var stribf
    */
   protected $modulus;
 
   /**
-   * Construct
+   * Create a new instance of the Modulus command
    *
-   * @param $left int
-   * @param $modulus int
+   * @param $left string
+   * @param $modulus string
    */
   public function __construct($left, $modulus)
   {
@@ -27,9 +31,9 @@ class Modulus extends AbstractCommand implements CommandInterface {
   }
 
   /**
-   * Run
+   * Run the command
    *
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function run()
   {

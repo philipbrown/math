@@ -5,25 +5,32 @@ use PhilipBrown\Math\Number;
 class Compare extends AbstractCommand implements CommandInterface {
 
   /**
-   * @var int
+   * The left operand, as a string.
+   *
+   * @var string
    */
   protected $left;
 
   /**
-   * @var int
+   * The right operand, as a string.
+   *
+   * @var string
    */
   protected $right;
 
   /**
+   * The optional scale parameter is used to set the number of digits
+   * after the decimal place which will be used in the comparison.
+   *
    * @var int
    */
   protected $scale;
 
   /**
-   * Construct
+   * Create a new instance of the Compare command
    *
-   * @param $left integer
-   * @param $right integer
+   * @param $left string
+   * @param $right string
    * @param $scale integer
    */
   public function __construct($left, $right, $scale)
@@ -34,9 +41,9 @@ class Compare extends AbstractCommand implements CommandInterface {
   }
 
   /**
-   * Run
+   * Run the command
    *
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function run()
   {

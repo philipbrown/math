@@ -1,14 +1,27 @@
 <?php namespace PhilipBrown\Math;
 
+use PhilipBrown\Math\Command\Add;
+use PhilipBrown\Math\Command\Power;
+use PhilipBrown\Math\Command\Divide;
+use PhilipBrown\Math\Command\Compare;
+use PhilipBrown\Math\Command\Modulus;
+use PhilipBrown\Math\Command\Subtract;
+use PhilipBrown\Math\Command\Multiply;
+use PhilipBrown\Math\Command\SquareRoot;
+
 class Math {
 
   /**
+   * The scale to use
+   *
    * @var integer
    */
   protected $scale;
 
   /**
-   * Construct
+   * Create a new instance of Math
+   *
+   * @return void
    */
   public function __construct()
   {
@@ -16,10 +29,10 @@ class Math {
   }
 
   /**
-   * Create
+   * Create a new Number instance
    *
    * @param $value int
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function create($value)
   {
@@ -27,7 +40,7 @@ class Math {
   }
 
   /**
-   * Set Scale
+   * Set default scale parameter for all bc math functions
    *
    * @param $scale int
    * @return int
@@ -43,112 +56,112 @@ class Math {
   }
 
   /**
-   * Add
+   * Add two arbitrary precision numbers
    *
    * @param $left int
    * @param $right int
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function add($left, $right)
   {
-    $command = new Command\Add($left, $right, $this->scale);
+    $command = new Add($left, $right, $this->scale);
 
     return $command->run();
   }
 
   /**
-   * Subtract
+   * Subtract one arbitrary precision number from another
    *
    * @param $left int
    * @param $right int
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function subtract($left, $right)
   {
-    $command = new Command\Subtract($left, $right, $this->scale);
+    $command = new Subtract($left, $right, $this->scale);
 
     return $command->run();
   }
 
   /**
-   * Divide
+   * Divide two arbitrary precision numbers
    *
    * @param $left int
    * @param $right int
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function divide($left, $right)
   {
-    $command = new Command\Divide($left, $right, $this->scale);
+    $command = new Divide($left, $right, $this->scale);
 
     return $command->run();
   }
 
   /**
-   * Multiply
+   * Multiply two arbitrary precision numbers
    *
    * @param $left int
    * @param $right int
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function multiply($left, $right)
   {
-    $command = new Command\Multiply($left, $right, $this->scale);
+    $command = new Multiply($left, $right, $this->scale);
 
     return $command->run();
   }
 
   /**
-   * Compare
+   * Compare two arbitrary precision numbers
    *
    * @param $left int
    * @param $right int
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function compare($left, $right)
   {
-    $command = new Command\Compare($left, $right, $this->scale);
+    $command = new Compare($left, $right, $this->scale);
 
     return $command->run();
   }
 
   /**
-   * Modulus
+   * Get modulus of an arbitrary precision number
    *
    * @param $left int
    * @param $modulus int
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function modulus($left, $modulus)
   {
-    $command = new Command\Modulus($left, $modulus);
+    $command = new Modulus($left, $modulus);
 
     return $command->run();
   }
 
   /**
-   * Power
+   * Raise an arbitrary precision number to another
    *
    * @param $left int
    * @param $right int
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function power($left, $right)
   {
-    $command = new Command\Power($left, $right, $this->scale);
+    $command = new Power($left, $right, $this->scale);
 
     return $command->run();
   }
 
   /**
-   * Square Root
+   * Get the square root of an arbitrary precision number
    *
    * @param $operand int
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function squareRoot($operand)
   {
-    $command = new Command\SquareRoot($operand, $this->scale);
+    $command = new SquareRoot($operand, $this->scale);
 
     return $command->run();
   }

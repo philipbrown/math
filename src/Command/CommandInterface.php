@@ -3,11 +3,11 @@
 interface CommandInterface {
 
   /**
-   * Run
+   * Run the command
    *
    * @param $left integer
    * @param $right integer
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function run();
 

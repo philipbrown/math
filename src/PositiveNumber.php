@@ -3,7 +3,7 @@
 class PositiveNumber extends Number {
 
   /**
-   * Is Valid
+   * Check to see if the number is valid
    *
    * @param string $number
    * @return bool

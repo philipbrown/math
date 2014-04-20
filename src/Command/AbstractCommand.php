@@ -5,10 +5,10 @@ use PhilipBrown\Math\Number;
 abstract class AbstractCommand {
 
   /**
-   * Is Number
+   * Ensure the value is an instance of Number
    *
    * @param $number integer
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function isNumber($number)
   {

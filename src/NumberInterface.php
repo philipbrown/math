@@ -3,7 +3,7 @@
 interface NumberInterface {
 
   /**
-   * Get Value
+   * Get the value
    *
    * @return string
    */

@@ -5,19 +5,24 @@ use PhilipBrown\Math\Number;
 class SquareRoot extends AbstractCommand implements CommandInterface {
 
   /**
-   * @var int
+   * The operand, as a string.
+   *
+   * @var string
    */
   protected $operand;
 
   /**
+   * This optional parameter is used to set the number of
+   * digits after the decimal place in the result.
+   *
    * @var int
    */
   protected $scale;
 
   /**
-   * Construct
+   * Create a new instance of the SquareRoot command
    *
-   * @param $left operand
+   * @param $left string
    * @param $scale integer
    */
   public function __construct($operand, $scale)
@@ -27,9 +32,9 @@ class SquareRoot extends AbstractCommand implements CommandInterface {
   }
 
   /**
-   * Run
+   * Run the command
    *
-   * @return Math\Number
+   * @return PhilipBrown\Math\Number
    */
   public function run()
   {

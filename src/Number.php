@@ -5,14 +5,17 @@ use PhilipBrown\Math\Exceptions\InvalidNumberException;
 class Number implements NumberInterface {
 
   /**
+   * The value of the Number
+   *
    * @var string
    */
   protected $value;
 
   /**
-   * Construct
+   * Create a new instance of Number
    *
    * @param string $value
+   * @param void
    */
   public function __construct($value)
   {
@@ -25,7 +28,7 @@ class Number implements NumberInterface {
   }
 
   /**
-   * Get Value
+   * Get the value
    *
    * @return string
    */
@@ -35,7 +38,7 @@ class Number implements NumberInterface {
   }
 
   /**
-   * Is Valid
+   * Check to see if the number is valid
    *
    * @param string $number
    * @return bool
@@ -46,7 +49,7 @@ class Number implements NumberInterface {
   }
 
   /**
-   * To String
+   * Return the value when cast as a string
    *
    * @return string
    */
