@@ -9,7 +9,7 @@ Add `philipbrown/math` as a requirement to `composer.json`:
 ```json
 {
   "require": {
-    "philipbrown/math": "dev-master"
+    "philipbrown/math": "1.*"
   }
 }
 ```
