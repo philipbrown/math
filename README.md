@@ -33,42 +33,42 @@ $m->setScale(2);
 
 Add two numbers:
 ```php
-$m->add(2, 2); // 4
+$n = $m->add(2, 2);
 ```
 
 Subtract two numbers:
 ```php
-$m->subtract(6, 3); // 3
+$n = $m->subtract(6, 3);
 ```
 
 Multiply two numbers:
 ```php
-$m->multiply(5, 5); // 25
+$n = $m->multiply(5, 5);
 ```
 
 Divide two numbers:
 ```php
-$m->divide(100, 10); // 10
+$n = $m->divide(100, 10);
 ```
 
 Compare two numbers:
 ```php
-$m->compare(2, 2); // 0
+$n = $m->compare(2, 2);
 ```
 
 Find the modulus of two numbers:
 ```php
-$m->modulus(2, 4); // 2
+$n = $m->modulus(2, 4);
 ```
 
 Find a number to the power of:
 ```php
-$m->power(4, 3); // 64
+$n = $m->power(4, 3);
 ```
 
 Find the square root of a number:
 ```php
-$m->squareRoot(49); // 7
+$n = $m->squareRoot(49);
 ```
 
 You will be returned an instance of ```PhilipBrown\Math\Number``` in each case.
