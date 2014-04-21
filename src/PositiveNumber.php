@@ -1,6 +1,6 @@
 <?php namespace PhilipBrown\Math;
 
-class PositiveNumber extends Number {
+class PositiveNumber extends Number implements NumberInterface {
 
   /**
    * Check to see if the number is valid
