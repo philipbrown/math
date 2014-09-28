@@ -2,4 +2,7 @@
 
 use Exception;
 
-class InvalidNumberException extends Exception {}
+class InvalidNumberException extends Exception
+{
+
+}

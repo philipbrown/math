@@ -1,12 +1,11 @@
 <?php namespace PhilipBrown\Math;
 
-interface NumberInterface {
-
-  /**
-   * Get the value
-   *
-   * @return string
-   */
-  public function getValue();
-
+interface NumberInterface
+{
+    /**
+     * Get the value
+     *
+     * @return string
+     */
+    public function getValue();
 }

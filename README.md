@@ -1,7 +1,9 @@
 #Math
 **A simple wrapper for BC Math**
 
-[![Build Status](https://travis-ci.org/philipbrown/math.png)](https://travis-ci.org/philipbrown/math)
+[![Build Status](https://travis-ci.org/philipbrown/math.png?branch=master)](https://travis-ci.org/philipbrown/math)
+[![Code Coverage](https://scrutinizer-ci.com/g/philipbrown/math/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/philipbrown/math/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/philipbrown/math/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/philipbrown/math/?branch=master)
 
 ##Installation
 Add `philipbrown/math` as a requirement to `composer.json`:
@@ -9,7 +11,7 @@ Add `philipbrown/math` as a requirement to `composer.json`:
 ```json
 {
   "require": {
-    "philipbrown/math": "1.*"
+    "philipbrown/math": "~1.0"
   }
 }
 ```
