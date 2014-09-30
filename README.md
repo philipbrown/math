@@ -1,79 +1,48 @@
-#Math
+# Math
 **A simple wrapper for BC Math**
 
 [![Build Status](https://travis-ci.org/philipbrown/math.png?branch=master)](https://travis-ci.org/philipbrown/math)
 [![Code Coverage](https://scrutinizer-ci.com/g/philipbrown/math/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/philipbrown/math/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/philipbrown/math/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/philipbrown/math/?branch=master)
 
-##Installation
+## Installation
 Add `philipbrown/math` as a requirement to `composer.json`:
 
 ```json
 {
   "require": {
-    "philipbrown/math": "~1.0"
+    "philipbrown/math": "~2.0"
   }
 }
 ```
 Update your packages with `composer update`.
 
-Inspired by [php-bcmath](https://github.com/notrix/php-bcmath).
-
-##Usage
-Using this package is really easy.
-
-Create a new instance of Math:
+## Usage
 ```php
-$m = new PhilipBrown\Math\Math;
-```
+// Add
+$number = Math::add(1.04, 2.406, 4);
 
-Set your required scale:
-```php
-// Default is 0
-$m->setScale(2);
-```
+// Compare
+$number = Math::compare(2.4567, 2.4566, 4);
 
-Add two numbers:
-```php
-$n = $m->add(2, 2);
-```
+// Divide
+$number = Math::divide(23.3945, 5, 4);
 
-Subtract two numbers:
-```php
-$n = $m->subtract(6, 3);
-```
+// Modulus
+$number = Math::modulus(10, 3);
 
-Multiply two numbers:
-```php
-$n = $m->multiply(5, 5);
-```
+// Multiply
+$number = Math::multiply(5.34, 2.2, 3);
 
-Divide two numbers:
-```php
-$n = $m->divide(100, 10);
-```
+// Power
+$number = Math::power(43.22, 2, 5);
 
-Compare two numbers:
-```php
-$n = $m->compare(2, 2);
-```
+// Square Root
+$number = Math::squareRoot(454.213, 4);
 
-Find the modulus of two numbers:
-```php
-$n = $m->modulus(2, 4);
+// Subtract
+$number = Math::subtract(10.888, 2.123, 3);
 ```
-
-Find a number to the power of:
-```php
-$n = $m->power(4, 3);
-```
-
-Find the square root of a number:
-```php
-$n = $m->squareRoot(49);
-```
-
-You will be returned an instance of ```PhilipBrown\Math\Number``` in each case.
 
 ## License
 The MIT License (MIT)

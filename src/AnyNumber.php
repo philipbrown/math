@@ -2,7 +2,7 @@
 
 use Assert\Assertion;
 
-class PositiveNumber implements Number
+class AnyNumber implements Number
 {
     /**
      * @int
@@ -17,7 +17,7 @@ class PositiveNumber implements Number
      */
     public function __construct($value)
     {
-        Assertion::min($value, 0);
+        Assertion::numeric($value);
 
         $this->value = $value;
     }

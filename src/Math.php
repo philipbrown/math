@@ -1,166 +1,152 @@
 <?php namespace PhilipBrown\Math;
 
-use PhilipBrown\Math\Command\Add;
-use PhilipBrown\Math\Command\Power;
-use PhilipBrown\Math\Command\Divide;
-use PhilipBrown\Math\Command\Compare;
-use PhilipBrown\Math\Command\Modulus;
-use PhilipBrown\Math\Command\Subtract;
-use PhilipBrown\Math\Command\Multiply;
-use PhilipBrown\Math\Command\SquareRoot;
+use PhilipBrown\Math\Commands\AddCommand;
+use PhilipBrown\Math\Commands\PowerCommand;
+use PhilipBrown\Math\Commands\DivideCommand;
+use PhilipBrown\Math\Commands\CompareCommand;
+use PhilipBrown\Math\Commands\ModulusCommand;
+use PhilipBrown\Math\Commands\MultiplyCommand;
+use PhilipBrown\Math\Commands\SubtractCommand;
+use PhilipBrown\Math\Commands\SquareRootCommand;
 
 class Math
 {
     /**
-     * The scale to use
+     * Add two numbers
      *
-     * @var integer
+     * @param mixed $left
+     * @param mixed $right
+     * @param mixed $scale
+     * @return Number
      */
-    private $scale;
-
-    /**
-     * Create a new instance of Math
-     *
-     * @return void
-     */
-    public function __construct()
+    public static function add($left, $right, $scale = 0)
     {
-        $this->scale = new PositiveNumber(0);
-    }
-
-    /**
-     * Create a new Number instance
-     *
-     * @param $value int
-     * @return PhilipBrown\Math\Number
-     */
-    public function create($value)
-    {
-        return new Number($value);
-    }
-
-    /**
-     * Set default scale parameter for all bc math functions
-     *
-     * @param $scale int
-     * @return int
-     */
-    public function setScale($scale)
-    {
-        if(! $scale instanceof PositiveNumber) {
-        $scale = new PositiveNumber($scale);
-        }
-
-        return $this->scale = $scale;
-    }
-
-    /**
-     * Add two arbitrary precision numbers
-     *
-     * @param $left int
-     * @param $right int
-     * @return PhilipBrown\Math\Number
-     */
-    public function add($left, $right)
-    {
-        $command = new Add($left, $right, $this->scale);
+        $left    = new AnyNumber($left);
+        $right   = new AnyNumber($right);
+        $scale   = new PositiveNumber($scale);
+        $command = new AddCommand($left, $right, $scale);
 
         return $command->run();
     }
 
     /**
-     * Subtract one arbitrary precision number from another
+     * Compare two numbers
      *
-     * @param $left int
-     * @param $right int
-     * @return PhilipBrown\Math\Number
+     * @param mixed $left
+     * @param mixed $right
+     * @param mixed $scale
+     * @return Number
      */
-    public function subtract($left, $right)
+    public static function compare($left, $right, $scale = 0)
     {
-        $command = new Subtract($left, $right, $this->scale);
+        $left    = new AnyNumber($left);
+        $right   = new AnyNumber($right);
+        $scale   = new PositiveNumber($scale);
+        $command = new CompareCommand($left, $right, $scale);
 
         return $command->run();
     }
 
     /**
-     * Divide two arbitrary precision numbers
+     * Divide two numbers
      *
-     * @param $left int
-     * @param $right int
-     * @return PhilipBrown\Math\Number
+     * @param mixed $left
+     * @param mixed $right
+     * @param mixed $scale
+     * @return Number
      */
-    public function divide($left, $right)
+    public static function divide($left, $right, $scale = 0)
     {
-        $command = new Divide($left, $right, $this->scale);
+        $left    = new AnyNumber($left);
+        $right   = new AnyNumber($right);
+        $scale   = new PositiveNumber($scale);
+        $command = new DivideCommand($left, $right, $scale);
 
         return $command->run();
     }
 
     /**
-     * Multiply two arbitrary precision numbers
+     * Find the modulus of two numbers
      *
-     * @param $left int
-     * @param $right int
-     * @return PhilipBrown\Math\Number
+     * @param mixed $operant
+     * @param mixed $modulus
+     * @return Number
      */
-    public function multiply($left, $right)
+    public static function modulus($operand, $modulus)
     {
-        $command = new Multiply($left, $right, $this->scale);
+        $operand = new AnyNumber($operand);
+        $modulus = new AnyNumber($modulus);
+        $command = new ModulusCommand($operand, $modulus);
 
         return $command->run();
     }
 
     /**
-     * Compare two arbitrary precision numbers
+     * Multiply two numbers
      *
-     * @param $left int
-     * @param $right int
-     * @return PhilipBrown\Math\Number
+     * @param mixed $left
+     * @param mixed $right
+     * @param mixed $scale
+     * @return Number
      */
-    public function compare($left, $right)
+    public static function multiply($left, $right, $scale = 0)
     {
-        $command = new Compare($left, $right, $this->scale);
+        $left    = new AnyNumber($left);
+        $right   = new AnyNumber($right);
+        $scale   = new PositiveNumber($scale);
+        $command = new MultiplyCommand($left, $right, $scale);
 
         return $command->run();
     }
 
     /**
-     * Get modulus of an arbitrary precision number
+     * Find the power two numbers
      *
-     * @param $left int
-     * @param $modulus int
-     * @return PhilipBrown\Math\Number
+     * @param mixed $left
+     * @param mixed $right
+     * @param mixed $scale
+     * @return Number
      */
-    public function modulus($left, $modulus)
+    public static function power($left, $right, $scale = 0)
     {
-        $command = new Modulus($left, $modulus);
+        $left    = new AnyNumber($left);
+        $right   = new AnyNumber($right);
+        $scale   = new PositiveNumber($scale);
+        $command = new PowerCommand($left, $right, $scale);
 
         return $command->run();
     }
 
     /**
-     * Raise an arbitrary precision number to another
+     * Find the square root of two numbers
      *
-     * @param $left int
-     * @param $right int
-     * @return PhilipBrown\Math\Number
+     * @param mixed $operant
+     * @param mixed $scale
+     * @return Number
      */
-    public function power($left, $right)
+    public static function squareRoot($operand, $scale)
     {
-        $command = new Power($left, $right, $this->scale);
+        $operand = new AnyNumber($operand);
+        $scale   = new AnyNumber($scale);
+        $command = new SquareRootCommand($operand, $scale);
 
         return $command->run();
     }
 
     /**
-     * Get the square root of an arbitrary precision number
+     * Subtract two numbers
      *
-     * @param $operand int
-     * @return PhilipBrown\Math\Number
+     * @param mixed $left
+     * @param mixed $right
+     * @param mixed $scale
+     * @return Number
      */
-    public function squareRoot($operand)
+    public static function subtract($left, $right, $scale = 0)
     {
-        $command = new SquareRoot($operand, $this->scale);
+        $left    = new AnyNumber($left);
+        $right   = new AnyNumber($right);
+        $scale   = new PositiveNumber($scale);
+        $command = new SubtractCommand($left, $right, $scale);
 
         return $command->run();
     }
